@@ -1,4 +1,4 @@
-export const BASE_URL = "http://84.252.142.182";
+export const BASE_URL = "https://mestokarp.ru";
 
 function checkResponse(res) {
   return res.ok ? res.json() : Promise.reject(`Ошибка ${res.status}`);
