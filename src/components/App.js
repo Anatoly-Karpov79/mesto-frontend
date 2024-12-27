@@ -240,6 +240,7 @@ function App() {
 
   function signOut() {
     localStorage.removeItem('token');
+    localStorage.removeItem('userId');
     navigate("/sign-up");
     setLoggedIn(false);
   }
