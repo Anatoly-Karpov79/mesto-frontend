@@ -17,14 +17,14 @@
     return fetch(this._baseUrl + `/users/me`, { 
       method: "GET",
       credentials: 'include',
-     headers: this._headers,
+    headers: this._headers,
     }).then(this._handleResponse);
   }
 
   getInitialCards() {
     return fetch(this._baseUrl + "/cards", {
       credentials: 'include',
-       headers: this._headers,
+      headers: this._headers,
     }).then(this._handleResponse);
   }
 
@@ -99,9 +99,9 @@ export const api = new Api({
   baseUrl: `https://mestokarp.ru`,
   
   headers: {
-    'Accept': 'application/json',
+    
       'Content-Type': 'application/json',
-      'Authorization' : `Bearer ${localStorage.getItem('token')}`
+      'Authorization' : `Bearer ${localStorage.getItem('jwt')}`
        
   },
   

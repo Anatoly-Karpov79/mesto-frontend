@@ -22,43 +22,34 @@ export const authorize = (email, password) => {
     credentials: 'include',
     headers: {
 
-         Accept: "application/json",
+      //   Accept: "application/json",
       "Content-Type": "application/json",
-      // 'Authorization' : `Bearer ${localStorage.getItem('token')}`
     },
     body: JSON.stringify({ email, password }),
   }).then(checkResponse)
     .then((data) => {
-      localStorage.setItem('token', data.token)
-      console.log(localStorage.getItem('userId'))
-      console.log(localStorage.getItem('token'))
+      localStorage.setItem('userId', data._id)
       return data;
     })
 
 };
 
-export const getContent = (token) => {
+export const getContent = () => {
 
   return fetch(`${BASE_URL}/users/me`, {
     method: "GET",
-    // credentials: 'include',
-    headers: {
-           "Accept": "application/json",
-           "Content-Type": "application/json",
-           'Authorization': `Bearer ${token}`,
-         },
-        
+    credentials: 'include',
 
   }).then((res) => checkResponse(res));
 };
 
-// export const checkToken = (token) => {
-//  return fetch(`${BASE_URL}/users/me`, {
-//    method: "GET",
-//    headers: {
-//      "Accept": "application/json",
-//      "Content-Type": "application/json",
-//      'Authorization': `Bearer ${localStorage.getItem('token')}`,
-//    },
-//  }).then(checkResponse);
-// };
+//export const checkToken = (token) => {
+ // return fetch(`${BASE_URL}/users/me`, {
+ //   method: "GET",
+ //   headers: {
+ //     "Accept": "application/json",
+ //     "Content-Type": "application/json",
+ //     'Authorization': `Bearer ${token}`,
+ //   },
+ // }).then(checkResponse);
+//};

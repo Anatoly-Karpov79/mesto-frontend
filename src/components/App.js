@@ -43,7 +43,6 @@ function App() {
         .getUserInfo()
         .then((res) => {
           setCurrentUser(res.data);
-          console.log(res)
         })
         .catch((err) => {
           console.log(err);
@@ -61,15 +60,11 @@ function App() {
   }, [loggedIn]);
 
   useEffect(() => {
-    const jwt = localStorage.getItem('token');
-    
+    const jwt = localStorage.getItem('userId');
     if (jwt) {
-      console.log("Проверили jwt")
-      // console.log(jwt)
-
       setCheckToken(true);
             auth
-        .getContent(jwt)
+        .getContent()
         .then((res) => {
           setLoggedIn(true);
           navigate("/", { replace: true });
@@ -203,16 +198,14 @@ function App() {
       .then((res) => {
         setLoggedIn(true);
         setCurrentUser(res);
-        console.log(res)
-        localStorage.setItem('token', res.token);
-        console.log(localStorage.getItem('token'))
+        localStorage.setItem('userId', res._id);
         navigate("/", { replace: true });
       })
       .catch((err) => {
         setShowTooltip(true);
         chooseInfoTooltip({
           image: error,
-          text: "Что-то пошло не так! Попробуйте еще раз! hendleLogin",
+          text: "Что-то пошло не так! Попробуйте еще раз!",
         });
       });
   }
@@ -239,7 +232,6 @@ function App() {
   }
 
   function signOut() {
-    localStorage.removeItem('token');
     localStorage.removeItem('userId');
     navigate("/sign-up");
     setLoggedIn(false);
