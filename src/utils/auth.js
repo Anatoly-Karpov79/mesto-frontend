@@ -1,4 +1,4 @@
-export const BASE_URL = "https://mestokarp.ru";
+export const BASE_URL = "https://api.mestokarp.ru";
 
 function checkResponse(res) {
   return res.ok ? res.json() : Promise.reject(`Ошибка ${res.status}`);

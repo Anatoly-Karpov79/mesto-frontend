@@ -96,7 +96,7 @@
 
 export const api = new Api({
       
-  baseUrl: `https://mestokarp.ru`,
+  baseUrl: `https://api.mestokarp.ru`,
   
   headers: {
     
