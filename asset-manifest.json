@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/mesto-frontend/static/css/main.8ea15fe5.css",
-    "main.js": "/mesto-frontend/static/js/main.9f7f5a58.js",
+    "main.js": "/mesto-frontend/static/js/main.4de8fac7.js",
     "static/media/Inter-Medium.woff2": "/mesto-frontend/static/media/Inter-Medium.e11c789edffb34e94493.woff2",
     "static/media/Inter-Black.woff2": "/mesto-frontend/static/media/Inter-Black.a383c8cdb8f9f124f32b.woff2",
     "static/media/Inter-Regular.woff2": "/mesto-frontend/static/media/Inter-Regular.18f86f5952748301a5f8.woff2",
@@ -17,10 +17,10 @@
     "static/media/Close Icon.svg": "/mesto-frontend/static/media/Close Icon.2ceb783afbab75916ddc.svg",
     "static/media/add.svg": "/mesto-frontend/static/media/add.d86bb2edc2f6eadb96b7.svg",
     "main.8ea15fe5.css.map": "/mesto-frontend/static/css/main.8ea15fe5.css.map",
-    "main.9f7f5a58.js.map": "/mesto-frontend/static/js/main.9f7f5a58.js.map"
+    "main.4de8fac7.js.map": "/mesto-frontend/static/js/main.4de8fac7.js.map"
   },
   "entrypoints": [
     "static/css/main.8ea15fe5.css",
-    "static/js/main.9f7f5a58.js"
+    "static/js/main.4de8fac7.js"
   ]
 }
